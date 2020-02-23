@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>BoardGamesCounter</title>
+  <meta name="author" content="Adam Karbowski">
+  <meta name="description" content="Simple counter app for board games">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="./style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <h1>Board Games Counter</h1>
+
+  <button class="hamburger">
+    <span class="hamburger__box">
+      <span class="hamburger__inner"></span>
+    </span>
+  </button>
+
+  <div class="sidebar">
+    <div>
+      <label>Add new player</label>
+      <button type="button" class=sidebar__item id="addPlayer">+</button>
+    </div>
+    <div>
+      <label>Method of counting</label>
+      <select name="counting" class="sidebar__item" placeholder="UP">
+        <option value="up">UP</option>
+        <option value="down">DOWN</option>
+      </select>
+    </div>
+  </div>
+
+
+  <div class="PlayerContainer">
+    <input type="text" id="playerName" placeholder="Name">
+    <input type="color" id="playerColor">
+  </div>
+
+
+  <script src="./index.js"></script>
+</body>
+
+</html>
