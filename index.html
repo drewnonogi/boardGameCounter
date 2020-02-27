@@ -22,9 +22,10 @@
   </button>
 
   <div class="sidebar">
+    <div class="sidebar__list"></div>
     <div>
       <label>Add new player</label>
-      <button type="button" class=sidebar__item id="addPlayer">+1</button>
+      <button type="button" class=sidebar__item id="addPlayer">Add next player</button>
     </div>
     <div>
       <label>Method of counting</label>
@@ -34,14 +35,29 @@
       </select>
     </div>
   </div>
-
-
-  <div class="PlayerContainer">
-    <input type="text" id="playerName" placeholder="Name">
-    <input type="color" id="playerColor">
   </div>
+  <div id="playersContainerHidden">
+    <div class="Player">
+      <input type="text" class="PlayerName" placeholder="Name">
+      <input type="color" class="PlayerColor">
+      <input type="number" min="0" value="1" class=CalculationValue>
+      <button type="button" class=AddValue>+</button>
+      <button type="button"class=SubtractValue>-</button>
+      <input type="text" readonly class="Result">
+      <button type="button" class=DeleteButton>X</button>
+    </div>
+  </div>
+  <ol>
 
-
+  </ol>
+  <div id=winningCondition>
+    <label>Get
+      <input type="number" min=0 id=conditionField>
+      points to win
+    </label>
+  </div>
+  <button type="button" id=saveCondition>Lock/Unlock condition</button>
+  <p>Some important buttons works with double click.</p>
   <script src="./index.js"></script>
 </body>
 
