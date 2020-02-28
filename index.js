@@ -20,23 +20,28 @@ document.addEventListener('dblclick', (event) => {
 // Adding & subtract
 document.addEventListener('click', (event) => {
   if (event.target.closest(".AddValue") !== null) {
-    let clickedPlayer = event.target.closest(".Player");
-    let calculationValue = clickedPlayer.getElementsByClassName("CalculationValue")[0].value
-    let currentResult = clickedPlayer.getElementsByClassName("Result")[0]
-    currentResult.value = Number(currentResult.value) + Number(calculationValue)
+    calculating(event, "+")
   } else if (event.target.closest(".SubtractValue") !== null) {
-    let clickedPlayer = event.target.closest(".Player");
-    let calculationValue = clickedPlayer.getElementsByClassName("CalculationValue")[0].value
-    let currentResult = clickedPlayer.getElementsByClassName("Result")[0]
-    currentResult.value = Number(currentResult.value) - Number(calculationValue)
+    calculating(event, "-")
   }
 })
+const calculating = (event, sign) => {
+  let clickedPlayer = event.target.closest(".Player");
+  let calculationValue = clickedPlayer.getElementsByClassName("CalculationValue")[0].value
+  let currentResult = clickedPlayer.getElementsByClassName("Result")[0]
+  if (sign == "+") {
+    currentResult.value = Number(currentResult.value) + Math.abs(Number(calculationValue))
+  } else if (sign == "-") {
+  currentResult.value = Number(currentResult.value) - Math.abs(Number(calculationValue))
+  }
+}
 
 // Locking winning condition value
 const conditionField = document.getElementById('conditionField')
 const saveCondition = document.getElementById('saveCondition')
 saveCondition.addEventListener('dblclick', () => {
   conditionField.toggleAttribute('readonly')
+  saveCondition.innerText = saveCondition.innerText == "Lock condition" ? "Unlock condition" : "Lock condition"
 })
 
 // Adding new player

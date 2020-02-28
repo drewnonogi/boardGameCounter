@@ -12,52 +12,66 @@
 </head>
 
 <body>
+  <p id="hint">Some important buttons works with double click.</p>
+  <div class=Wrapper>
+    <h1>Board Games Counter</h1>
 
-  <h1>Board Games Counter</h1>
+    <button class="hamburger">
+      <span class="hamburger__box">
+        <span class="hamburger__inner"></span>
+      </span>
+    </button>
 
-  <button class="hamburger">
-    <span class="hamburger__box">
-      <span class="hamburger__inner"></span>
-    </span>
-  </button>
-
-  <div class="sidebar">
-    <div class="sidebar__list"></div>
-    <div>
-      <label>Add new player</label>
-      <button type="button" class=sidebar__item id="addPlayer">Add next player</button>
+    <div class="sidebar">
+      <div class="sidebar__list"></div>
+      <div>
+        <label>Add new player</label>
+        <button type="button" class=sidebar__item id="addPlayer">Add next player</button>
+      </div>
+      <div>
+        <label>Method of counting</label>
+        <select name="counting" class="sidebar__item" placeholder="UP">
+          <option value="up">UP</option>
+          <option value="down">DOWN</option>
+        </select>
+      </div>
     </div>
-    <div>
-      <label>Method of counting</label>
-      <select name="counting" class="sidebar__item" placeholder="UP">
-        <option value="up">UP</option>
-        <option value="down">DOWN</option>
-      </select>
-    </div>
-  </div>
-  </div>
-  <div id="playersContainerHidden">
-    <div class="Player">
-      <input type="text" class="PlayerName" placeholder="Name">
-      <input type="color" class="PlayerColor">
-      <input type="number" min="0" value="1" class=CalculationValue>
-      <button type="button" class=AddValue>+</button>
-      <button type="button"class=SubtractValue>-</button>
-      <input type="text" readonly class="Result">
-      <button type="button" class=DeleteButton>X</button>
-    </div>
-  </div>
-  <ol>
 
-  </ol>
-  <div id=winningCondition>
-    <label>Get
-      <input type="number" min=0 id=conditionField>
-      points to win
-    </label>
+    <div id="playersContainerHidden">
+      <div class="Player">
+        <input type="text" class="PlayerName" placeholder="Name">
+        <input type="color" class="PlayerColor">
+        <input type="number" min="0" value="1" class=CalculationValue>
+        <button type="button" class=AddValue>+</button>
+        <button type="button" class=SubtractValue>-</button>
+        <input type="text" readonly class="Result">
+        <button type="button" class=DeleteButton>X</button>
+      </div>
+    </div>
+    <ol>
+
+    </ol>
+    <div id="bottomMenu">
+      <div id=winningCondition>
+        <label>Get
+          <input type="number" min=0 id=conditionField>
+          points to win
+        </label>
+        <div>
+          <button type="button" id=saveCondition>Lock condition</button>
+        </div>
+      </div>
+      <div id=winningCondition>
+        <label>Get
+          <input type="number" min=0 id=conditionField>
+          points to win
+        </label>
+        <div>
+          <button type="button" id=saveCondition>Lock condition</button>
+        </div>
+      </div>
+    </div>
   </div>
-  <button type="button" id=saveCondition>Lock/Unlock condition</button>
-  <p>Some important buttons works with double click.</p>
   <script src="./index.js"></script>
 </body>
 

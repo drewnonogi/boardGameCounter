@@ -1,6 +1,6 @@
 html {
   box-sizing: border-box;
-  color:white
+  color: #000;
 }
 
 *,
@@ -9,36 +9,42 @@ html {
   box-sizing: inherit;
 }
 
-button{
-  font:bold;
+button {
+  font-weight: 900;
 }
 
 body {
   overflow-x: hidden;
-  background-color: #444;
-  padding: 20px;
+  background-color: #585858;
+  padding: 1.25rem;
 }
 
-h1{
+.Wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+h1 {
   text-align: center;
-  font-size: 50px;
-  color: rgb(255, 115, 0)
+  font-size: 3.125rem;
+  color: rgb(255, 115, 0);
 }
 
-#addPlayer{
+#addPlayer {
   width: 15em;
 }
 
 .hamburger {
-  padding: 10px;
+  padding: 0.625rem;
   display: inline-block;
   cursor: pointer;
   background-color: transparent;
   border: 0;
   margin: 0;
   position: absolute;
-  right: 15px;
-  top: 15px;
+  right: 1rem;
+  top: 1rem;
 }
 
 .hamburger,
@@ -102,7 +108,7 @@ h1{
 .sidebar {
   height: 100vh;
   width: 250px;
-  background-color: #777;
+  background-color: #aaa;
   position: absolute;
   top: 0;
   left: 100vw;
@@ -114,60 +120,72 @@ h1{
 }
 
 .sidebar__list {
-  margin-top: 50px;
+  margin-top: 3.125rem;
   list-style: none;
 }
 
 .sidebar__item {
   display: block;
-  margin: 10px;
+  margin: 0.625rem;
 }
 a {
   text-decoration: none;
   color: #444;
 }
-label{
-  font-size: 25px;
+label {
+  font-size: 1.6rem;
 }
-input,option,select{
+input,
+option,
+select {
   background-color: #ddd;
   border-color: black;
-  width: 15em
+  width: 15em;
 }
 
-.Player{
+.Player {
   display: flex;
   align-items: baseline;
-  justify-content: flex-start;
+  justify-content: space-between;
+  margin: 1rem;
+  height: 2rem;
+  flex-wrap: wrap;
+}
+ol {
 }
 
-.Player>*{
-  margin-right: 1rem;
+li {
 }
 
-.Player>input{
-  max-width: 120px;
-  min-width: 60px;
+.Player > input {
+  flex-basis: 20%;
 }
 
-#playersContainerHidden{
+#playersContainerHidden {
   display: none;
 }
 
-#winningCondition{
-  margin-top: 3em;
+#winningCondition {
 }
 
-#winningCondition input{
-  width: 5em
+#winningCondition input {
+  width: 5em;
 }
 
-#saveCondition{
-  margin:1em;
+#saveCondition {
+  margin: 1em;
 }
 
-p{
-  max-width: calc(100vw - 88px);
+#hint {
+  max-width: calc(100vw - 5.6rem);
   position: absolute;
-  top:0
+  top: 0;
+  color: white;
+}
+
+#bottomMenu {
+  margin-top: 4em;
+  display:flex;
+  justify-content: space-between;
+
 }
