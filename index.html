@@ -25,9 +25,12 @@
     <div class="sidebar">
       <div class="sidebar__list"></div>
       <div>
-        <label>Add new player</label>
         <button type="button" class=sidebar__item id="addPlayer">Add next player</button>
       </div>
+      <div>
+        <button type="button" class=sidebar__item id="deleteAllPlayers">Delete ALL players</button>
+      </div>
+      <!--"not supported yet"     
       <div>
         <label>Method of counting</label>
         <select name="counting" class="sidebar__item" placeholder="UP">
@@ -35,6 +38,7 @@
           <option value="down">DOWN</option>
         </select>
       </div>
+       -->
     </div>
 
     <div id="playersContainerHidden">
@@ -48,27 +52,22 @@
         <button type="button" class=DeleteButton>X</button>
       </div>
     </div>
-    <ol>
+    <ol id=allPlayers>
 
     </ol>
     <div id="bottomMenu">
       <div id=winningCondition>
-        <label>Get
+        <label>
           <input type="number" min=0 id=conditionField>
-          points to win
+          points goal
         </label>
         <div>
           <button type="button" id=saveCondition>Lock condition</button>
         </div>
       </div>
-      <div id=winningCondition>
-        <label>Get
-          <input type="number" min=0 id=conditionField>
-          points to win
-        </label>
-        <div>
-          <button type="button" id=saveCondition>Lock condition</button>
-        </div>
+      <div id=winningPlayer>
+        <label>Player with currently highest score:</label>
+        <input type="text" min=0 id=winner>
       </div>
     </div>
   </div>
