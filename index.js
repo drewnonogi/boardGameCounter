@@ -41,16 +41,24 @@ const winnerCheck = () => {
   let allScores = document.getElementsByClassName('Result')
   let currentIndex = 0
   let highest = -Infinity
+  let goal = document.getElementById('conditionField')
+  let list = document.getElementById('listedPlayers')
+  list.textContent=''
   for (let i = 0; i < allScores.length; i++) {
+    if (goal.hasAttribute('readonly') && goal.value <= Number(allScores[i].value)){
+      let temporary=allScores[i].closest('.Player')
+      let name=temporary.getElementsByClassName('PlayerName')[0].value
+      list.textContent+=`${name} `
+    }
     if (highest < Number(allScores[i].value)) {
       highest = Number(allScores[i].value)
       currentIndex = i
     }
   }
   let winner = document.getElementsByClassName('Result')[currentIndex].closest('.Player');
-  winnerName=winner.getElementsByClassName('PlayerName')[0].value
-  slotForWinnerName=document.getElementById('winner')
-  slotForWinnerName.value=winnerName
+  winnerName = winner.getElementsByClassName('PlayerName')[0].value
+  slotForWinnerName = document.getElementById('winner')
+  slotForWinnerName.value = winnerName
 }
 
 
