@@ -149,6 +149,7 @@ select {
   background-color: #ddd;
   border-color: black;
   width: 15em;
+  text-align: center;
 }
 
 .Player {
@@ -164,6 +165,7 @@ ol {
 }
 
 li {
+  
 }
 
 .Player > input {
