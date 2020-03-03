@@ -3,6 +3,12 @@ html {
   color: #000;
 }
 
+#topPlayers{
+  text-align: center;
+  color: white;
+  font-size: 1.25rem;
+}
+
 *,
 *::before,
 *::after {
@@ -107,13 +113,13 @@ h1 {
   background-color: #777;
   position: absolute;
   top: 0;
-  left: 100vw;
-  transform: translateX(0px);
+  right:0;
+  transform:scale(0);
   border: 0.15rem solid black;
 }
 
 .sidebar--active {
-  transform: translateX(-250px);
+  transform: scale(1);
 }
 
 .sidebar__list {
@@ -158,14 +164,13 @@ ol {
 }
 
 li {
-  /* flex-wrap: wrap; */
 }
 
 .Player > input {
   flex-basis: 20%;
 }
 
-.PlayerColor{
+.PlayerColor {
   max-width: 4.5rem;
 }
 
@@ -181,6 +186,9 @@ li {
 
 #bottomMenu > * {
   background-color: white;
+}
+
+#bottomMenu * {
   text-align: center;
 }
 
