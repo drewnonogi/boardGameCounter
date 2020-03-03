@@ -68,6 +68,7 @@ const saveCondition = document.getElementById('saveCondition')
 saveCondition.addEventListener('dblclick', () => {
   conditionField.toggleAttribute('readonly')
   saveCondition.innerText = saveCondition.innerText == 'Lock condition' ? 'Unlock condition' : 'Lock condition'
+  winnerCheck()
 })
 
 // Adding new player
