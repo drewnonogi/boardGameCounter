@@ -14,6 +14,7 @@ hamburger.addEventListener('click', hamburgerClick);
 document.addEventListener('dblclick', (event) => {
   if (event.target.closest('.DeleteButton') !== null) {
     event.target.closest('li').remove();
+    winnerCheck()
   }
 })
 
@@ -88,6 +89,7 @@ const deleteAll = document.getElementById('deleteAllPlayers')
 deleteAll.addEventListener('dblclick', () => {
   let allPlayers = document.getElementById('allPlayers')
   allPlayers.innerHTML = ''
+  winnerCheck()
 })
 
 
