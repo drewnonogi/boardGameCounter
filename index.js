@@ -44,12 +44,12 @@ const winnerCheck = () => {
   let highest = -Infinity
   let goal = document.getElementById('conditionField')
   let list = document.getElementById('listedPlayers')
-  list.textContent=''
+  list.textContent = ''
   for (let i = 0; i < allScores.length; i++) {
-    if (goal.hasAttribute('readonly') && goal.value <= Number(allScores[i].value)){
-      let temporary=allScores[i].closest('.Player')
-      let name=temporary.getElementsByClassName('PlayerName')[0].value
-      list.textContent+=`${name} `
+    if (goal.hasAttribute('readonly') && goal.value <= Number(allScores[i].value)) {
+      let temporary = allScores[i].closest('.Player')
+      let name = temporary.getElementsByClassName('PlayerName')[0].value
+      list.textContent += `${name} `
     }
     if (highest < Number(allScores[i].value)) {
       highest = Number(allScores[i].value)
