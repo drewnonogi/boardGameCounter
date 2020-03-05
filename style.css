@@ -3,7 +3,7 @@ html {
   color: #000;
 }
 
-#topPlayers{
+#topPlayers {
   text-align: center;
   color: white;
   font-size: 1.25rem;
@@ -113,8 +113,8 @@ h1 {
   background-color: #777;
   position: absolute;
   top: 0;
-  right:0;
-  transform:scale(0);
+  right: 0;
+  transform: scale(0);
   border: 0.15rem solid black;
 }
 
@@ -148,36 +148,27 @@ option,
 select {
   background-color: #ddd;
   border-color: black;
-  width: 15em;
   text-align: center;
+  height: 2rem;
+  font-size: 1rem;
 }
 
 .Player {
   display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  margin: 1rem;
-  height: 2rem;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
-
-ol {
-}
-
-li {
-  
-}
-
-.Player > input {
-  flex-basis: 20%;
+.Player > input :not(.PlayerColor) {
+  max-width: 15rem;
 }
 
 .PlayerColor {
   max-width: 4.5rem;
+  min-width: 4rem;
 }
-
-#playersContainerHidden {
-  display: none;
+li {
+  margin-bottom: 1rem;
+  border-bottom: 0.0625rem solid black;
 }
 
 #bottomMenu {
@@ -222,4 +213,8 @@ li {
 #hint {
   max-width: calc(100vw - 5.6rem);
   color: white;
+}
+
+#playersContainerHidden {
+  display: none;
 }
