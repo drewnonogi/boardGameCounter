@@ -51,7 +51,7 @@ const winnerCheck = () => {
       let name = temporary.getElementsByClassName('PlayerName')[0].value
       list.textContent += `${name} `
     }
-    if (highest < Number(allScores[i].value)) {
+    if (highest <= Number(allScores[i].value)) {
       highest = Number(allScores[i].value)
       currentIndex = i
     }
@@ -75,10 +75,10 @@ saveCondition.addEventListener('dblclick', () => {
 // Adding new player
 const addingPlayer = () => {
   counterOfPlayers++
-  const playerSchemat = document.getElementById('playersContainerHidden').cloneNode(true)
+  const playerschema = document.getElementById('playersContainerHidden').cloneNode(true)
   const createdPlayer = document.createElement('li')
-  playerSchemat.setAttribute('id', counterOfPlayers)
-  createdPlayer.appendChild(playerSchemat)
+  playerschema.setAttribute('id', counterOfPlayers)
+  createdPlayer.appendChild(playerschema)
   playersList.appendChild(createdPlayer)
 }
 const addPlayer = document.getElementById('addPlayer')
