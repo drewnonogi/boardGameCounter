@@ -3,6 +3,12 @@ html {
   color: #000;
 }
 
+body {
+  overflow-x: hidden;
+  background-color: #585858;
+  padding: 1.25rem;
+}
+
 #topPlayers {
   text-align: center;
   color: white;
@@ -19,16 +25,12 @@ button {
   font-weight: 900;
 }
 
-body {
-  overflow-x: hidden;
-  background-color: #585858;
-  padding: 1.25rem;
-}
 
 .Wrapper {
   max-width: 900px;
   margin: 0 auto;
   background-color: #aaa;
+  border: 0.15rem solid black
 }
 
 h1 {
@@ -108,8 +110,8 @@ h1 {
 }
 
 .sidebar {
-  height: 21, 4375rem;
-  width: 250px;
+  height: 10rem;
+  width: 15.625rem;
   background-color: #777;
   position: absolute;
   top: 0;
@@ -158,6 +160,7 @@ select {
   justify-content: space-around;
   flex-wrap: wrap;
 }
+
 .Player > input :not(.PlayerColor) {
   max-width: 15rem;
 }
@@ -165,6 +168,9 @@ select {
 .PlayerColor {
   max-width: 4.5rem;
   min-width: 4rem;
+}
+#operators > *{
+  height:100%;
 }
 li {
   margin-bottom: 1rem;
@@ -187,7 +193,7 @@ li {
 
 #winningCondition {
   padding: 0.25em;
-  border: 0.15rem solid black;
+  border: 0.15rem solid rgb(42, 29, 223);
 }
 
 #winningPlayer {

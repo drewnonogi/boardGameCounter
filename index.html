@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <title>BoardGamesCounter</title>
   <meta name="author" content="Adam Karbowski">
-  <meta name="description" content="Simple counter app for board games">
+  <meta name="description" content="Simple counter for board games">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link href="./style.css" rel="stylesheet">
@@ -33,15 +33,7 @@
       <div>
         <button type="button" class=sidebar__item id="deleteAllPlayers">Delete ALL players</button>
       </div>
-      <!--"not supported yet"     
-      <div>
-        <label>Method of counting</label>
-        <select name="counting" class="sidebar__item" placeholder="UP">
-          <option value="up">UP</option>
-          <option value="down">DOWN</option>
-        </select>
-      </div>
-       -->
+
     </div>
 
     <div id="playersContainerHidden">
@@ -49,8 +41,11 @@
         <input type="text" class="PlayerName" placeholder="Name">
         <input type="color" class="PlayerColor">
         <input type="number" min="0" value="1" class=CalculationValue>
-        <button type="button" class=AddValue>+</button>
-        <button type="button" class=SubtractValue>-</button>
+        <div id="operators">
+          <button type="button" class=AddValue>+</button>
+          <button type="button" class=SubtractValue>-</button>
+        </div>
+
         <input type="text" readonly class="Result" placeholder=Score>
         <button type="button" class=DeleteButton>X</button>
       </div>
@@ -70,7 +65,7 @@
       </div>
       <div id=winningPlayer>
         <label>Player with currently highest score:</label>
-        <input type="text" min=0 id=winner>
+        <input type="text" readonly min=0 id=winner>
       </div>
     </div>
   </div>
